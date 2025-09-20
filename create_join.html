@@ -2,30 +2,43 @@
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>create_join_group</title>
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Create or Join Group</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=New+Rocker&display=swap" rel="stylesheet">
+        
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
 	<div class="navbar">
-        <ul>
-            <li>img</li>
-            <li>NewsLetter</li>
-            <li>New Post</li>
-            <li><a href="#" id="logout-link">Log out</a></li>
-        </ul>
-    </div>
+      <ul class="nav-left">
+          <li>img</li>
+          <li class="newsletter-title">NewsLetter</li>
+      </ul>
+      <ul class="nav-right">
+          <li ><a href="dash.html" id="my-groups-link">My Groups</a></li>
+          <li><a href="#" id="new-post-link">New Post</a></li>
+          <li><a href="dash.html" id="logout-link">Log out</a></li>
+          
+      </ul>
+  </div>
 	<h1>Create a Group</h1>
-	<p>Group Name</p>
-	<input type="text" name="Group Name" id="new_group_name" placeholder="Enter Group Name" />
-	<p>Group Image</p>
-	<input type="file" name="Group Img" id="new_group_img" placeholder="Value" />
-	<br>
-	<br>
-	<input type="submit" value="Create" />
+	<form id="create-group-form">
+		<p>Group Name</p>
+		<input type="text" name="Group Name" id="new_group_name" placeholder="Enter Group Name" />
+		<p>Group Image</p>
+		<input type="file" name="Group Img" id="new_group_img" placeholder="Value" />
+		<br>
+		<br>
+		<input type="submit" value="Create" />
+	</form>
 	
 	<h1>Join a Group</h1>
-	<input type="text" name="Group Code" id="group_code" placeholder="Enter Group Code" />
-	<input type="submit" value="Join"/>
+	<form id="join-group-form">
+		<input type="text" name="Group Code" id="group_code" placeholder="Enter Group Code" />
+		<input type="submit" value="Join"/>
+	</form>
 
   </body>
 </html>
