@@ -25,6 +25,7 @@ DROP TABLE IF EXISTS `groups_table`;
 CREATE TABLE `groups_table` (
   `id` int NOT NULL AUTO_INCREMENT,
   `group_name` varchar(50) NOT NULL,
+  `deadline` datetime DEFAULT NULL,
   `current_newsletter_id` int DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_current_newsletter` (`current_newsletter_id`),
@@ -38,7 +39,7 @@ CREATE TABLE `groups_table` (
 
 LOCK TABLES `groups_table` WRITE;
 /*!40000 ALTER TABLE `groups_table` DISABLE KEYS */;
-INSERT INTO `groups_table` VALUES (1,'CS Girls',1),(2,'Wongs',NULL),(3,'Tomys',NULL);
+INSERT INTO `groups_table` VALUES (1,'CS Girls','2025-09-21 14:30:00',1),(2,'Wongs',NULL,NULL),(3,'Tomys','2025-09-20 14:30:00',NULL);
 /*!40000 ALTER TABLE `groups_table` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -106,6 +107,7 @@ DROP TABLE IF EXISTS `updates`;
 CREATE TABLE `updates` (
   `id` int NOT NULL AUTO_INCREMENT,
   `user_id` int NOT NULL,
+  `title` varchar(100) NOT NULL,
   `content` text NOT NULL,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`),
@@ -119,7 +121,7 @@ CREATE TABLE `updates` (
 
 LOCK TABLES `updates` WRITE;
 /*!40000 ALTER TABLE `updates` DISABLE KEYS */;
-INSERT INTO `updates` VALUES (1,1,'databases are great!');
+INSERT INTO `updates` VALUES (1,1,'Opinion on databases','databases are great!');
 /*!40000 ALTER TABLE `updates` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -186,4 +188,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-09-20  9:17:20
+-- Dump completed on 2025-09-20 13:06:47
