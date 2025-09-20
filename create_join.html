@@ -24,17 +24,21 @@
       </ul>
   </div>
 	<h1>Create a Group</h1>
-	<p>Group Name</p>
-	<input type="text" name="Group Name" id="new_group_name" placeholder="Enter Group Name" />
-	<p>Group Image</p>
-	<input type="file" name="Group Img" id="new_group_img" placeholder="Value" />
-	<br>
-	<br>
-	<input type="submit" value="Create" />
+	<form id="create-group-form">
+		<p>Group Name</p>
+		<input type="text" name="Group Name" id="new_group_name" placeholder="Enter Group Name" />
+		<p>Group Image</p>
+		<input type="file" name="Group Img" id="new_group_img" placeholder="Value" />
+		<br>
+		<br>
+		<input type="submit" value="Create" />
+	</form>
 	
 	<h1>Join a Group</h1>
-	<input type="text" name="Group Code" id="group_code" placeholder="Enter Group Code" />
-	<input type="submit" value="Join"/>
+	<form id="join-group-form">
+		<input type="text" name="Group Code" id="group_code" placeholder="Enter Group Code" />
+		<input type="submit" value="Join"/>
+	</form>
 
   </body>
 </html>
