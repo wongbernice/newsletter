@@ -1,0 +1,17 @@
+{
+  "name": "newsletter-api",
+  "version": "1.0.0",
+  "description": "API for newsletter project",
+  "main": "groups.js",
+  "scripts": {
+    "start-groups": "node groups.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.1.0",
+    "mysql2": "^3.15.0"
+  }
+}
