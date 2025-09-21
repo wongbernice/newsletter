@@ -1,4 +1,4 @@
-/*frontend create/ join group page */
+/*frontend create/join group page */
 const form=document.getElementById("create-group-form");
 const statusText=document.getElementById("create-status");
 const btn = document.getElementById("create-btn");
@@ -15,7 +15,7 @@ form.addEventListener("submit", async (event) => {
     if (!grpname) { statusText.textContent = "Please enter a group name."; return; }
     if (!dt) { statusText.textContent = "Please select a date and time."; return; }
 
-    //making sure date is after today
+    //making sure date is after today's date and time
     const selectedDate=new Date(dt);
     const nowDate=new Date();
     if (selectedDate<=nowDate){
@@ -35,6 +35,10 @@ form.addEventListener("submit", async (event) => {
                 date:  selectedDate.toDateString(), 
             })
         });
+
+        statusText.textContent="Group created successfully.";
+        window.location.href="dash.html";
+
     }catch (err) {
         console.error(err);
         statusText.textContent = "Unexpected error. Please try again.";
