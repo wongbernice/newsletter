@@ -9,12 +9,9 @@ body{
     padding-top: 50px;
     padding-bottom: 40px;
     margin-left:3%;
-    margin-right:3%;  
-     
-}
-
-h1{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-right:3%;
+    
+    
 }
 
 
@@ -56,96 +53,14 @@ a:active {
   color: var(--text-color);
 }
 
-/*create/join group*/
-
-.create-join-group{
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    margin: 20px;
-}
-
-#create-group-form{
-    text-align: left;
-    max-width: 400px;
-    min-width: 300px;
-    
-}
-
-#create-group-form label{
-    margin: 10px;
-}
-
-#create-group-form input{ 
-    margin: 10px;
-    width: 100%;
-    padding: 10px 12px;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    
-}
-
-#create-group-form input[type=submit]{ 
-    width: 100%;
-    background-color: var(--accent-color-darkest);
-    color: var(--text-color-light);
-    padding: 12px 14px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    
-}
-
-#create-group-form input[type=submit]:hover{ 
-    background-color: var(--accent-color-darker);    
-}
-
-#join-group-form{
-    text-align: left;
-    min-width: 300px;
-}
-#join-group-form label{
-    margin: 10px;
-}
-
-#join-group-form input{ 
-    margin: 10px;
-    width: 100%;
-    padding: 10px 12px;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    
-}
-
-#join-group-form input[type=submit]{ 
-    width: 100%;
-    background-color: var(--accent-color-darkest);
-    color: var(--text-color-light);
-    padding: 12px 14px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    
-}
-
-#join-group-form input[type=submit]:hover{ 
-    background-color: var(--accent-color-darker);    
-}
-
 
 /*colors*/
 :root{
     /*main colors*/
     --bg-color: #f1dde7; 
     --text-color: #000000;
-    --text-color-light: #ffffff;
 
     /*accent colors*/
     --accent-color-dark: #565555;
-    --accent-color-darker: #262626;
     --accent-color-darkest: #000000;
 }
