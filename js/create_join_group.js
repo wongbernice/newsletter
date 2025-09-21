@@ -1,4 +1,8 @@
 /*frontend create/ join group page */
+
+const userId=Number(localStorage.getItem("userId")) || 0;
+
+//create group
 const form=document.getElementById("create-group-form");
 const statusText=document.getElementById("create-status");
 const btn = document.getElementById("create-btn");
@@ -24,7 +28,6 @@ form.addEventListener("submit", async (event) => {
     }
    
     btn.disabled = true;
-    console.log(selectedDate.toISOString().slice(0, 19).replace('T', ' '));
     try{
         const res = await fetch("http://localhost:3001/create_group", {
             method: "POST",
@@ -35,10 +38,54 @@ form.addEventListener("submit", async (event) => {
                 date:  selectedDate.toDateString(), 
             })
         });
+
+        jStatusText.textContent = "Created a group successfully";
+        jStatusText.style.color="green";
+        window.location.href="dash.html";
+
+
     }catch (err) {
         console.error(err);
         statusText.textContent = "Unexpected error. Please try again.";
     } finally {
         btn.disabled = false;
+    }
+});
+
+//join group
+
+const jForm=document.getElementById("join-group-form");
+const jStatusText=document.getElementById("join-status");
+const jbtn = document.getElementById("join-btn");
+
+jForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    jStatusText.textContent="";
+
+    const grpcode=document.getElementById("group_code").value.trim();
+  
+    if (!grpcode) { jStatusText.textContent = "Please enter a group code."; return; }
+    
+   
+    jbtn.disabled = true;
+
+    try{
+        const res = await fetch("http://localhost:3001/add_user_to_group", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                user_id: userId,
+                group_id: grpcode
+            })
+        });
+        jStatusText.textContent = "Joined a group successfully";
+        jStatusText.style.color="green";
+        window.location.href="dash.html";
+        
+    }catch (err) {
+        console.error(err);
+        jStatusText.textContent = "Unexpected error. Please try again.";
+    } finally {
+        jbtn.disabled = false;
     }
 });
