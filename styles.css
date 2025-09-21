@@ -1,17 +1,15 @@
 .newsletter-title{
     font-family: 'New Rocker', Georgia, 'Times New Roman', Times, serif;
-    font-size: 20px;
+    font-size: 35px;
 }
 
-
 body{
+	font-family: Lexend, Arial, sans-serif;
     font-size: 16px;
     padding-top: 50px;
     padding-bottom: 40px;
     margin-left:3%;
     margin-right:3%;
-    
-    
 }
 
 
@@ -25,14 +23,21 @@ body{
     left: 0;
     width:100%;
     box-sizing: border-box;
-    padding: 1rem 2rem;
+    padding: 0.5rem 2rem;
     
-    background-color: var(--accent-color-dark);
+    background-color: var(--accent-color-darkest);
     display: flex;
     justify-content: space-between;
     align-items: center;
+	color:#ffffff;
     
 }
+
+.nav-left {
+    display: flex;
+    align-items: center; /* forces logo + text to line up vertically */
+}
+
 
 .navbar ul{
     list-style-type: none;
@@ -45,10 +50,27 @@ body{
     margin: 0 10px;
 }
 
+.navbar a{
+	color: #ffffff;
+	text-decoration:none;
+	transition: color 0.3s;
+}
+
+.navbar a:visited{
+	color: #ffffff;
+}
+.navbar a:hover{
+	color: #8f8e8c;
+}
+.navbar a:active{
+	color: #ffffff;
+}
+
+
 a,
 a:visited,
 a:hover,
-a:active {
+body a:active {
   text-decoration: none;
   color: var(--text-color);
 }
