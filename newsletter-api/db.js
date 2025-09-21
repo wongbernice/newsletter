@@ -1,22 +1,24 @@
 // This file connects Node.js to MySQL
 
-const mysql = require('mysql2');
+const mysql = require('mysql2/promise');
 
 // create a connection
-const connection = mysql.createConnection({
+const pool = mysql.createPool({
   host: 'localhost',
   user: 'SCHacks',
   password: 'hacking',
-  database: 'newsletter'
+  database: 'newsletter',
+  waitForConnections:true,
+  connectionLimit:10,
+  queueLimit:0
 });
 
 // connect to mySQL
-connection.connect((err) => {
-  if (err) {
-    console.error('Error connecting: ' + err.stack);
-    return;
-  }
-  console.log('Connected to MySQL as id ' + connection.threadId);
-});
+async function query(sql, params) {
+  const [results] = await pool.execute(sql, params);
+  return results;
+}
 
-module.exports = connection;
+module.exports = {
+  query
+};
