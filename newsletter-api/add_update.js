@@ -20,11 +20,12 @@ async function addUpdate({groupId, user_id, title, content}){
             [groupId]
         );
         
-        const newsletter_id = newsletterResult[0].current_newsletter_id;
+        const newsletter_id = newsletterResult[0]?.current_newsletter_id;
         let message = 'Update added to newsletter successfully';
 
         if (!newsletter_id) {
             message = 'No current newsletter for this group';
+            return { message, update_id, title, content };
         }
 
         // insert into newsletter_updates
@@ -34,7 +35,7 @@ async function addUpdate({groupId, user_id, title, content}){
             [newsletter_id, update_id]
         );
 
-        return {message};
+        return { message, update_id, title, content };
 
     } catch(err){
         console.error('Error adding update: ', err);
