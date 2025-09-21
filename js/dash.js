@@ -40,7 +40,16 @@ function renderAll() {
         row.innerHTML = `
             <strong>${c.group_name}</strong>
         `;
-        row.onclick = () => window.location.href='group_page.html?id=${encodeURIComponent(c.id)}';
+        row.onclick = () => {
+
+            //store group info locally
+            localStorage.setItem("grpId", c.id);
+            localStorage.setItem("grpName", c.group_name);
+            localStorage.setItem("grpDeadline", c.deadline);
+            localStorage.setItem("grpCn", c.current_newsletter_id);
+
+            window.location.href='group_page.html'
+        };
         row.style.cursor = "pointer";
         results.appendChild(row);
     }
