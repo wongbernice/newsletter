@@ -36,6 +36,7 @@ form.addEventListener("submit", async (event) => {
                 group_name: grpname,
                 deadline: selectedDate.toISOString().slice(0, 19).replace('T', ' '),
                 date:  selectedDate.toDateString(), 
+                user_id: userId
             })
         });
 

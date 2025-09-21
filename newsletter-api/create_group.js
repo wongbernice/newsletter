@@ -18,6 +18,19 @@ async function create(group){
         );
 
         //update current newlstter id
+        const result3 = await db.query(
+            `UPDATE groups_table
+            SET current_newsletter_id= ?
+            WHERE id= ?`,
+            [result2.insertId, result.insertId]
+        );
+
+        const result4 = await db.query(
+            `INSERT INTO user_groups
+            (user_id, group_id) 
+            VALUES (?,?)`,
+            [group.user_id, result.insertId]
+        );
 
         let message = 'Error in creating programming language';
 
