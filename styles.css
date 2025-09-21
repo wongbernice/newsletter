@@ -99,7 +99,7 @@ body a:active {
 #create-status {
   margin-top: 10px;
   text-align: center;
-  color: red;              /* or your preferred color */
+  color: red;
   font-size: 0.9rem;
 }
 
@@ -135,8 +135,19 @@ body a:active {
 
 #join-group-form{
     text-align: left;
+    max-width: 400px;
     min-width: 300px;
+	display: inline-block;
+	text-align: left;
 }
+
+#join-status {
+  margin-top: 10px;
+  text-align: center;
+  color: red;
+  font-size: 0.9rem;
+}
+
 #join-group-form label{
     margin: 10px;
 }
