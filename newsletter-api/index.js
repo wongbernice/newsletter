@@ -31,6 +31,11 @@ app.use('/add_update', addUpdateRouter);
 const compileNewsletterRouter = require('./routes/compilenewsletter');
 app.use('/compile_newsletter', compileNewsletterRouter);
 
+// call get_newsletters.js
+const getNewslettersRouter = require('./routes/getnewsletters');
+app.use('/newsletters', getNewslettersRouter);
+
+
 // error handler middleware
 app.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;
