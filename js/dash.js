@@ -48,7 +48,7 @@ function renderAll() {
             localStorage.setItem("grpDeadline", c.deadline);
             localStorage.setItem("grpCn", c.current_newsletter_id);
 
-            window.location.href=`group_page.html/id=${c.id}`;
+            window.location.href=`group_page.html?id=${c.id}`;
         };
         row.style.cursor = "pointer";
         results.appendChild(row);
