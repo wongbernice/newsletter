@@ -10,25 +10,30 @@
           <!-- inside this it's css -->
         <style>
             /* inside this it's css*/
-            .grid{
+            #results{
                 display: grid;
-                grid-template-columns: auto auto auto;
-                
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                overflow-y: auto;
                 padding: 10px;
                 column-gap: 10px;
                 row-gap: 10px;
+
             }
-            .grid > div{
+            #results > div{
+                height: auto;
+                display: flex;
                 background-color: #000000;
                 color: #FFFFFF;
                 padding: 40px;
                 text-align: center;
                 border-radius: 5px;
                 font-size: 20px;
-                
+
+                justify-content: center;
+                               
                 
             }
-            .grid>div>button{
+            #results > div > button{
                 background-color: #000000;
                 color: #FFFFFF;
                 border: none;
@@ -50,22 +55,17 @@
                
             </ul>
         </div>
-        <h1>Welcome User!</h1>
+        <h1>Welcome <span id="user-name"></span>!</h1>
+        <div id="statusText"></div>
         <div class="grid">
-            <div>
-                <a style="color: white;" href="group_page.html">
-                    Group 1
-                </a>
-            </div>
-            <div>
-                Group 2
-            </div>
-            <div>
-                Group 3
-            </div>
-            <div>
-                <button>+</button>
-            </div>
+            
+            <div id="results"> 
+                <div style="cursor: pointer;" onclick="window.location.href='create_join.html'">
+                    <button>+</button>
+                </div>
+            </div>            
+
         </div>
+        <script src="/js/dash.js"></script>
     </body>
 </html>
