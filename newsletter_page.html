@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Newsletter – Dashboard</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=New+Rocker&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="navbar">
+			<ul class="nav-left">
+				<li>
+					<img
+						src="pidgeon-logo.gif"
+						alt="NewsLetter logo"
+						height="50"
+					/>
+				</li>
+				<li class="newsletter-title"><a href="dash.html" id="my-groups-link">NewsLetter</a></li>
+			</ul>
+			<ul class="nav-right">
+				<li ><a href="dash.html" id="my-groups-link">My Groups</a></li>
+				<li><a href="#" id="new-post-link">New Post</a></li>
+				<li><a href="dash.html" id="logout-link">Log out</a></li> 
+			</ul>
+		</div>
+		
+        <h1 id="newsletter-title">Title</h1>
+		<p><strong>Date:</strong> <span id="newsletter-date"></span></p>
+        <div id="newsletter-content">this is the content</div>
+            
+        <script src="/js/newsletter_view.js"></script>
+    </body>
+</html>
