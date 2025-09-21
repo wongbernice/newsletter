@@ -91,7 +91,16 @@ body a:active {
     text-align: left;
     max-width: 400px;
     min-width: 300px;
+	display: inline-block;
+	text-align: left;
     
+}
+
+#create-status {
+  margin-top: 10px;
+  text-align: center;
+  color: red;              /* or your preferred color */
+  font-size: 0.9rem;
 }
 
 #create-group-form label{
