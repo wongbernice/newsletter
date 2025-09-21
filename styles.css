@@ -190,6 +190,7 @@ body a:active {
   display: flex;
   align-items: center;
   gap: 5px; /* spacing between label and timer */
+  font-size: 0.7rem;
 }
 
 #submission-deadline{
