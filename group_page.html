@@ -8,7 +8,33 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=New+Rocker&display=swap" rel="stylesheet">
         
-        <link rel="stylesheet" href="styles.css">
+		<style>
+			#results {
+				flex: 1;
+				overflow-y: auto; /* scroll if list is long */
+				padding-right: 4px; /* spacing so scroll bar doesn’t overlap */
+			}
+			#results > div{
+                height: auto;
+                display: flex;
+                background-color: #000000;
+                color: #FFFFFF;
+                padding: 40px;
+                text-align: center;
+                border-radius: 5px;
+                font-size: 20px;
+
+                justify-content: center;     
+            }
+            #results > div > button{
+                background-color: #000000;
+                color: #FFFFFF;
+                border: none;
+                font-size: 20px;
+                
+            }
+		</style>
+		<link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <div class="navbar">

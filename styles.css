@@ -269,12 +269,6 @@ body a:active {
   text-align: center; /* centers "Past Newsletters" */
 }
 
-#results {
-  flex: 1;
-  overflow-y: auto; /* scroll if list is long */
-  padding-right: 4px; /* spacing so scroll bar doesn’t overlap */
-}
-
 
 /*colors*/
 :root{
