@@ -178,8 +178,23 @@ body a:active {
     background-color: var(--accent-color-darker2);    
 }
 
+.group-header {
+  display: flex;
+  justify-content: space-between; /* name left, timer right */
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.submission-timer {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* spacing between label and timer */
+}
+
 #submission-deadline{
 	color: red;
+	font-weight: bold;
 }
 
 /*colors*/
