@@ -21,11 +21,11 @@ app.use('/add_user_to_group', addUserToGroupRouter)
 
 // call get_groups.js
 const getGroupsRouter = require('./routes/getgroups');
-app.use('/', getGroupsRouter);
+app.use('/get_groups', getGroupsRouter);
 
 // call add_update.js
 const addUpdateRouter = require('./routes/addupdate');
-app.use('/', addUpdateRouter);
+app.use('/add_update', addUpdateRouter);
 
 // call compile_newsletter.js
 const compileNewsletterRouter = require('./routes/compilenewsletter');
