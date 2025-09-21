@@ -19,6 +19,10 @@ app.use((err, req, res, next) => {
   return;
 });
 
+// call add_user_to_group.js
+const addUserToGroupRouter = require('./routes/addusertogroup');
+app.use('/add_user_to_group', addUserToGroupRouter)
+
 
 app.get("/db-test", (req, res) => {
     db.query("SELECT NOW() AS currentTime", (err, results) => {
