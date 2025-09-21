@@ -2,9 +2,9 @@
   "name": "newsletter-api",
   "version": "1.0.0",
   "description": "API for newsletter project",
-  "main": "groups.js",
+  "main": "index.js",
   "scripts": {
-    "start-groups": "node groups.js"
+    "start-groups": "node index.js"
   },
   "keywords": [],
   "author": "",
