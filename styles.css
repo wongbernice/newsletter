@@ -197,6 +197,54 @@ body a:active {
 	font-weight: bold;
 }
 
+.submission-box {
+  background-color: var(--accent-color-light);
+  border-radius: 12px;
+  padding: 20px;
+  width: 300px; /* adjust as needed */
+  display: flex;
+  flex-direction: column;
+}
+
+.submission-box h1 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  text-align: center; /* centers "My Submission" */
+}
+
+.submission-box textarea {
+  width: 100%;
+  height: 400px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: none;
+  margin-bottom: 15px;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.button-row {
+  display: flex;
+  justify-content: flex-end; /* pushes button to the right */
+}
+
+.submit-btn {
+  background-color: var(--accent-color-darkest);
+  color: var(--text-color-light);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.submit-btn:hover {
+  background-color: var(--accent-color-darker2);
+}
+
+
 /*colors*/
 :root{
     /*main colors*/
@@ -205,6 +253,7 @@ body a:active {
 	--text-color-light: #ffffff;
 
     /*accent colors*/
+	--accent-color-light: #f5f5f5;
     --accent-color-dark: #565555;
 	--accent-color-darker: #a8a8a8;
 	--accent-color-darker2: #404040;
