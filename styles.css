@@ -178,6 +178,10 @@ body a:active {
     background-color: var(--accent-color-darker2);    
 }
 
+#submission-deadline{
+	color: red;
+}
+
 /*colors*/
 :root{
     /*main colors*/
