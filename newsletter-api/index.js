@@ -23,6 +23,9 @@ app.use((err, req, res, next) => {
 const addUserToGroupRouter = require('./routes/addusertogroup');
 app.use('/add_user_to_group', addUserToGroupRouter)
 
+// call get_groups.js
+const getGroupsRouter = require('./routes/getgroups');
+app.use('/', getGroupsRouter);
 
 app.get("/db-test", (req, res) => {
     db.query("SELECT NOW() AS currentTime", (err, results) => {
