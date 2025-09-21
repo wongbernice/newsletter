@@ -25,7 +25,7 @@ DROP TABLE IF EXISTS `groups_table`;
 CREATE TABLE `groups_table` (
   `id` int NOT NULL AUTO_INCREMENT,
   `group_name` varchar(50) NOT NULL,
-  `deadline` datetime DEFAULT NULL,
+  `deadline` timestamp DEFAULT NULL,
   `current_newsletter_id` int DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_current_newsletter` (`current_newsletter_id`),

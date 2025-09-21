@@ -1,10 +1,13 @@
 const express = require('express');
-const db = require('./db'); // your db.js connection
+const db = require('./db');
 
 const app = express();
 app.use(express.json());
-const PORT = 3000;
+const PORT = 3001;
 const createGroupRouter = require('./routes/creategroup');
+
+const cors = require("cors");
+app.use(cors()); 
 
 app.get("/", (req, res) => {
     res.json({ status: "READY!" });
