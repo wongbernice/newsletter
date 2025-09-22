@@ -62,7 +62,7 @@ h1{
 	color: var(--text-color-light);
 }
 .navbar a:hover{
-	color: var(--accent-color-darker);
+	color: var(--accent-color-dark);
 }
 .navbar a:active{
 	color: var(--text-color-light);
@@ -276,13 +276,13 @@ body a:active {
 :root{
     /*main colors*/
     --bg-color: #f1dde7; 
-    --text-color: #182400;
-	--text-color-light: #f3ffd9;
+    --text-color: #222e1f;
+	--text-color-light: #eafce6;
 
     /*accent colors*/
-	--accent-color-light: #dcf5a9;
-    --accent-color-dark: #cbe595;
-	--accent-color-darker: #6e8a36;
-	--accent-color-darker2: #445917;
-    --accent-color-darkest: #2d3d0c;
+	--accent-color-light: #d6f2d5;
+    --accent-color-dark: #83b078;
+	--accent-color-darker: #678a5e;
+	--accent-color-darker2: #506949;
+    --accent-color-darkest: #374a32;
 }
