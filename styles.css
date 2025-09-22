@@ -223,9 +223,21 @@ body a:active {
   text-align: center; /* centers "My Submission" */
 }
 
+.submission-box input {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: none;
+  margin-bottom: 15px;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
 .submission-box textarea {
   width: 100%;
-  height: 500px;
+  height: 350px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 6px;

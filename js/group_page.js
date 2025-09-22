@@ -1,18 +1,28 @@
 /*frontend group page */
 
+const grpId=localStorage.getItem("grpId")|| 0;
+const userId=Number(localStorage.getItem("userId")) || 0;
+
 const form = document.getElementById("update-form");
 const input = document.getElementById("add-content");
+
 
 const statusText = document.createElement("div");
 form.appendChild(statusText);
 
 // Submit form
 form.addEventListener("submit", async (event) => {
+    
     event.preventDefault();
     statusText.textContent = "";
 
     const content = input.value.trim();    
-
+    const titletext = document.getElementById("add-title").value.trim();
+    
+    if (!titletext) { 
+        statusText.textContent = "Please enter a title before submitting."; 
+        return; 
+    }
     if (!content) { 
         statusText.textContent = "Please enter some content before submitting."; 
         return; 
@@ -22,15 +32,21 @@ form.addEventListener("submit", async (event) => {
     submitButton.disabled = true;
 
     try {
-        const res = await fetch("http://localhost:3001/add_update", {
+        const res = await fetch(`http://localhost:3001/add_update/api/group/${grpId}/updates`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ content })
+            body: JSON.stringify({ 
+                content:content,
+                group_id: groupId,
+                user_id: userId,
+                title: titletext
+            })
         });
 
         if (res.ok) {
             statusText.textContent = "Update submitted successfully!";
             input.value = "";
+            titletext.value="";
         } else {
             statusText.textContent = "Failed to submit update.";
         }
