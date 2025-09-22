@@ -68,7 +68,7 @@ function renderAll() {
             <strong>${n.title}</strong>
             <p>Published: ${new Date(n.created_at).toLocaleDateString()}</p>
         `;
-        row.onclick = () => window.location.href = `newsletter_view.html?id=${encodeURIComponent(n.id)}&group=${encodeURIComponent(n.group_id)}`;
+        row.onclick = () => window.location.href = `newsletter_page.html?id=${encodeURIComponent(n.id)}&group=${encodeURIComponent(n.group_id)}`;
         row.style.cursor = "pointer";
         results.appendChild(row);
     }
